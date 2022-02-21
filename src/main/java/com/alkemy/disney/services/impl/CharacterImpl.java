@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CharacterImpl implements CharacterService {
@@ -27,5 +28,20 @@ public class CharacterImpl implements CharacterService {
     @Override
     public Character getByAge(Short age) {
         return characterRepository.findByAge(age);
+    }
+
+    @Override
+    public void save(Character character) {
+        characterRepository.save(character);
+    }
+
+    @Override
+    public Optional<Character> getById(Long id) {
+        return characterRepository.findById(id);
+    }
+
+    @Override
+    public void delete(Long id) {
+        characterRepository.deleteById(id);
     }
 }
