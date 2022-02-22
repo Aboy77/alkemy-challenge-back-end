@@ -32,10 +32,10 @@ public class DisneyApplication {
 		return (args) -> {
 			// class
 			Users users = new Users("briancuenca200@gmail.com", passwordEncoder.encode("1234"));
-			Character character = new Character("/img", "Mickey",  (short) 22, "10kg", "A mouse walking in the park");
-			Film film = new Film("/img", "The mouse", LocalDate.now(), (byte) 5);
-			Film film2 = new Film("/img", "The monster house", LocalDate.now(), (byte) 4);
-			Gender gender = new Gender("Animation", "/img/filmlogo");
+			Character character = new Character("/img", "mickey",  (short) 22, "10kg", "A mouse walking in the park");
+			Film film = new Film("/img", " mickey's house of villians", LocalDate.now(), (byte) 5);
+			Film film2 = new Film("/img", "the monster house", LocalDate.now(), (byte) 4);
+			Gender gender = new Gender("animation", "/img/filmlogo");
 
 			// relational
 			character.addFilm(film);
