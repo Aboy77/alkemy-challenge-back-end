@@ -20,7 +20,6 @@ public class WebAuthorization extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers( HttpMethod.POST,"/disney/login").permitAll()
-                .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/rest/**", "/characters/**").hasAuthority("USER");
 
         http.formLogin()
